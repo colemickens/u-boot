@@ -55,38 +55,17 @@
 
 #include <environment/distro/sf.h>
 
-#define STARLIGHT_FEDORA_BOOTENV \
-	"bootdir=/boot\0" \
-	"bootenv=uEnv.txt\0" \
-	"mmcdev=0\0" \
-	"mmcpart=3\0"
-
-#define STARLIGHT_TEST_BOOTENV \
-	"testpart=0:1\0" \
-	"testenv=u74_uEnv.txt\0" \
-	"mmcsetup=mmc part\0" \
-	"fdtsetup=fdt addr ${fdtcontroladdr}\0" \
-	"fatenv=fatload mmc ${testpart} ${loadaddr} ${testenv};" \
-		"env import -t ${loadaddr} ${filesize}\0"
-
 #define CONFIG_EXTRA_ENV_SETTINGS \
-	STARLIGHT_FEDORA_BOOTENV \
-	"loadaddr=0xa0000000\0" \
-	STARLIGHT_TEST_BOOTENV \
-	"loadbootenv=fatload mmc ${mmcdev} ${loadaddr} ${bootenv}\0" \
-	"ext4bootenv=ext4load mmc ${bootpart} ${loadaddr} ${bootdir}/${bootenv}\0" \
-	"importbootenv=echo Importing environment from mmc${mmcdev} ...; " \
-		"env import -t ${loadaddr} ${filesize}\0" \
-	"mmcbootenv=setenv bootpart ${mmcdev}:${mmcpart}; " \
-		"mmc dev ${mmcdev}; " \
-		"if mmc rescan; then " \
-			"run loadbootenv && run importbootenv; " \
-			"run ext4bootenv && run importbootenv; " \
-			"if test -n $uenvcmd; then " \
-				"echo Running uenvcmd ...; " \
-				"run uenvcmd; " \
-			"fi; " \
-		"fi\0" \
+	"fdt_high=0xffffffffffffffff\0" \
+	"initrd_high=0xffffffffffffffff\0" \
+	"scriptaddr=0x88100000\0" \
+	"script_offset_f=0x1fff000\0" \
+	"script_size_f=0x1000\0" \
+	"kernel_addr_r=0x84000000\0" \
+	"kernel_comp_addr_r=0x90000000\0" \
+	"kernel_comp_size=0x10000000\0" \
+	"fdt_addr_r=0x88000000\0" \
+	"ramdisk_addr_r=0x88300000\0" \
 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
 	BOOTENV \
 	BOOTENV_SF

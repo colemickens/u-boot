@@ -85,6 +85,12 @@ config TFTP_TSIZE
 	  size from server, and if supported, limits the progress bar to
 	  50 characters total which fits on single line.
 
+config TFTP_FILE_NAME_MAX_LEN
+	int "TFTP filename max length"
+	default 128
+	help
+	  Maximum filename/path length for TFTP
+
 config SERVERIP_FROM_PROXYDHCP
 	bool "Get serverip value from Proxy DHCP response"
 	help

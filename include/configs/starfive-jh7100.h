@@ -66,6 +66,7 @@
 	"kernel_comp_size=0x10000000\0" \
 	"fdt_addr_r=0x88000000\0" \
 	"ramdisk_addr_r=0x88300000\0" \
+	"pxefile_addr_r=0x88200000\0" \
 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
 	BOOTENV \
 	BOOTENV_SF

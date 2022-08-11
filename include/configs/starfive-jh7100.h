@@ -44,7 +44,6 @@
  */
 #if CONFIG_IS_ENABLED(CMD_NET)
 #define CONFIG_DW_ALTDESCRIPTOR
-#define CONFIG_ARP_TIMEOUT		0x5000
 #endif
 
 /* HACK these should have '#if defined (stuff) around them like zynqp*/

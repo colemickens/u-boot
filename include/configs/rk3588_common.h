@@ -71,10 +71,7 @@
 #include <config_distro_bootcmd.h>
 
 #define CONFIG_EXTRA_ENV_SETTINGS \
-	BOOTENV_SHARED_MTD	\
 	ENV_MEM_LAYOUT_SETTINGS \
-	"fdtfile=" FDTFILE \
-	"partitions=" PARTS_RKIMG \
 	ROCKCHIP_DEVICE_SETTINGS \
 	RKIMG_DET_BOOTDEV \
 	BOOTENV

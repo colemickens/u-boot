@@ -1,7 +1,7 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 /*
  * Copyright (c) 2016 Rockchip Electronics Co. Ltd.
- *
- * SPDX-License-Identifier:	GPL-2.0+
+ * Author: Xing Zheng <zhengxing@rock-chips.com>
  */
 
 #ifndef _DT_BINDINGS_CLK_ROCKCHIP_RK3399_H
@@ -21,6 +21,7 @@
 #define ARMCLKB				9
 
 /* sclk gates (special clocks) */
+#define SCLK_I2SOUT_SRC			64
 #define SCLK_I2C1			65
 #define SCLK_I2C2			66
 #define SCLK_I2C3			67
@@ -126,14 +127,24 @@
 #define SCLK_PCIEPHY_REF100M		167
 #define SCLK_USBPHY0_480M_SRC		168
 #define SCLK_USBPHY1_480M_SRC		169
-#define SCLK_DDRCLK			170
-#define SCLK_TESTOUT2			171
+#define SCLK_DDRC			170
+#define SCLK_TESTCLKOUT2		171
+#define SCLK_UART0_SRC			172
+#define SCLK_UART_SRC			173
+#define SCLK_I2S0_DIV			174
+#define SCLK_I2S1_DIV			175
+#define SCLK_I2S2_DIV			176
+#define SCLK_SPDIF_DIV			177
+#define SCLK_TESTCLKOUT1		179
+#define SCLK_CIF_OUT_SRC		178
 
 #define DCLK_VOP0			180
 #define DCLK_VOP1			181
 #define DCLK_VOP0_DIV			182
 #define DCLK_VOP1_DIV			183
 #define DCLK_M0_PERILP			184
+#define DCLK_VOP0_FRAC			185
+#define DCLK_VOP1_FRAC			186
 
 #define FCLK_CM0S			190
 
@@ -352,6 +363,7 @@
 #define SCLK_I2C0_PMU			9
 #define SCLK_I2C4_PMU			10
 #define SCLK_I2C8_PMU			11
+#define SCLK_UART4_SRC			12
 
 #define PCLK_SRC_PMU			19
 #define PCLK_PMU			20
@@ -422,7 +434,7 @@
 #define SRST_A_ADB400_GIC2COREB		40
 #define SRST_A_ADB400_COREB2GIC		41
 #define SRST_P_DBG_B			42
-#define SRST_L2_B_T			43
+#define SRST_L2_B_T			44
 #define SRST_ADB_B_T			45
 #define SRST_A_RKPERF_B			46
 #define SRST_PVTM_CORE_B		47

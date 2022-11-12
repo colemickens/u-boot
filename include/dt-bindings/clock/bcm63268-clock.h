@@ -1,15 +1,9 @@
-/*
- * Copyright (C) 2017 Álvaro Fernández Rojas <noltari@gmail.com>
- *
- * Derived from linux/arch/mips/include/asm/mach-bcm63xx/bcm63xx_regs.h
- *
- * SPDX-License-Identifier:	GPL-2.0+
- */
+/* SPDX-License-Identifier: GPL-2.0+ */
 
 #ifndef __DT_BINDINGS_CLOCK_BCM63268_H
 #define __DT_BINDINGS_CLOCK_BCM63268_H
 
-#define BCM63268_CLK_GLESS	0
+#define BCM63268_CLK_DIS_GLESS	0
 #define BCM63268_CLK_VDSL_QPROC	1
 #define BCM63268_CLK_VDSL_AFE	2
 #define BCM63268_CLK_VDSL	3
@@ -32,21 +26,5 @@
 #define BCM63268_CLK_NAND	20
 #define BCM63268_CLK_TBUS	27
 #define BCM63268_CLK_ROBOSW250	31
-
-#define BCM63268_TCLK_EPHY1	0
-#define BCM63268_TCLK_EPHY2	1
-#define BCM63268_TCLK_EPHY3	2
-#define BCM63268_TCLK_GPHY	3
-#define BCM63268_TCLK_DSL	4
-#define BCM63268_TCLK_WO_EPHY	5
-#define BCM63268_TCLK_WO_DSL	6
-#define BCM63268_TCLK_FAP1	11
-#define BCM63268_TCLK_FAP2	15
-#define BCM63268_TCLK_UTO_50	16
-#define BCM63268_TCLK_UTO_EXT	17
-#define BCM63268_TCLK_USB_REF	18
-#define BCM63268_TCLK_SW_RST	29
-#define BCM63268_TCLK_HW_RST	30
-#define BCM63268_TCLK_POR_RST	31
 
 #endif /* __DT_BINDINGS_CLOCK_BCM63268_H */

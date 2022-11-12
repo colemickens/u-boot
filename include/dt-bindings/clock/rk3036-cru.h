@@ -1,8 +1,7 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 /*
- * Copyright (c) 2014 MundoReader S.L.
- * Author: Heiko Stuebner <heiko@sntech.de>
- *
- * SPDX-License-Identifier:	GPL-2.0+
+ * Copyright (c) 2015 Rockchip Electronics Co. Ltd.
+ * Author: Xing Zheng <zhengxing@rock-chips.com>
  */
 
 #ifndef _DT_BINDINGS_CLK_ROCKCHIP_RK3036_H
@@ -41,14 +40,15 @@
 #define SCLK_SDMMC_SAMPLE	118
 #define SCLK_SDIO_SAMPLE	119
 #define SCLK_EMMC_SAMPLE	121
-#define SCLK_PVTM_CORE          123
-#define SCLK_PVTM_GPU           124
-#define SCLK_PVTM_VIDEO         125
+#define SCLK_PVTM_CORE		123
+#define SCLK_PVTM_GPU		124
+#define SCLK_PVTM_VIDEO		125
+#define SCLK_I2S_FRAC		126
+#define SCLK_I2S_PRE		127
 #define SCLK_MAC		151
 #define SCLK_MACREF		152
+#define SCLK_MACPLL		153
 #define SCLK_SFC		160
-
-#define DCLK_LCDC		190
 
 /* aclk gates */
 #define ACLK_DMAC2		194
@@ -57,6 +57,7 @@
 #define ACLK_VCODEC		208
 #define ACLK_CPU		209
 #define ACLK_PERI		210
+#define ACLK_HEVC		211
 
 /* pclk gates */
 #define PCLK_GPIO0		320
@@ -77,6 +78,7 @@
 #define PCLK_PERI		363
 #define PCLK_DDRUPCTL		364
 #define PCLK_WDT		368
+#define PCLK_ACODEC		369
 
 /* hclk gates */
 #define HCLK_OTG0		449
@@ -86,6 +88,7 @@
 #define HCLK_SDMMC		456
 #define HCLK_SDIO		457
 #define HCLK_EMMC		459
+#define HCLK_MAC		460
 #define HCLK_I2S		462
 #define HCLK_LCDC		465
 #define HCLK_ROM		467
